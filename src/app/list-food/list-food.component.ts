@@ -15,16 +15,16 @@ export class ListFoodComponent implements OnInit {
 
   foodListFilter = 'all';
 
-  startDeleteFood(idx: number) {
-    this.deleteFoodSender.emit(idx);
+  startDeleteFood(thisFood: Food) {
+    this.deleteFoodSender.emit(thisFood);
   }
 
   startNewFood() {
     this.startNewFoodSender.emit();
   }
 
-  startEditFood(idx) {
-    this.startEditFoodSender.emit(idx);
+  startEditFood(thisFood: Food) {
+    this.startEditFoodSender.emit(thisFood);
   }
 
   changeFoodListFilter(option: string) {

@@ -25,8 +25,13 @@ export class AppComponent {
     new Food('Ice Cream', 'bowl with cherry on top', 750)
   ];
 
-  deleteFood(idx: number) {
-    this.foodList.splice(idx, 1);
+  deleteFood(thisFood: Food) {
+    for (let i = 0; i < this.foodList.length; i++) {
+      if (this.foodList[i] === thisFood) {
+        this.foodList.splice(i, 1);
+        return;
+      }
+    }
   }
 
   startNewFood() {
@@ -42,8 +47,8 @@ export class AppComponent {
     this.showNewFoodForm = false;
   }
 
-  startEditFood(idx: number) {
-    this.editFood = this.foodList[idx];
+  startEditFood(thisFood: Food) {
+    this.editFood = thisFood;
   }
 
   endEditFood() {

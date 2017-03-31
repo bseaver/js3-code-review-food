@@ -16,12 +16,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let food of foodList | caloricContent:foodListFilter; let idx = index;">
+    <tr *ngFor="let food of foodList | caloricContent:foodListFilter">
       <td>{{food.foodName}}</td>
       <td>{{food.foodDetails}}</td>
       <td>{{food.foodCalories}}</td>
-      <td><button (click)="startEditFood(idx)" class="btn btn-info">Edit</button></td>
-      <td><button (click)="startDeleteFood(idx)" class="btn btn-warning">Delete</button></td>
+      <td><button (click)="startEditFood(food)" class="btn btn-info">Edit</button></td>
+      <td><button (click)="startDeleteFood(food)" class="btn btn-warning">Delete</button></td>
     </tr>
   </tbody>
   <tfoot>
