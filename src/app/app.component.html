@@ -15,6 +15,7 @@
       <app-new-food
         [showNewFoodForm]="showNewFoodForm"
         (cancelNewFoodSender)="cancelNewFood()"
+        (newFoodSender)="newFood($event)"
       ></app-new-food>
     </div> <!-- col -->
 

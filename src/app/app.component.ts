@@ -11,7 +11,7 @@ import { Food } from "./food.model";
 
 export class AppComponent {
   showNewFoodForm = false;
-  
+
   // Seeded data for demonstration purposes
   foodList: Food[] = [
     new Food('Apple', 'Large Braeburn', 100),
@@ -33,6 +33,11 @@ export class AppComponent {
   }
 
   cancelNewFood() {
+    this.showNewFoodForm = false;
+  }
+
+  newFood(sentFood: Food) {
+    this.foodList.push(sentFood);
     this.showNewFoodForm = false;
   }
 }

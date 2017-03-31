@@ -7,12 +7,28 @@ import { Food } from "./../food.model";
   styleUrls: ['./new-food.component.css']
 })
 export class NewFoodComponent implements OnInit {
+  inValidName = false;
+  inValidCalories = false;
+
   @Input() showNewFoodForm: boolean;
   @Output() cancelNewFoodSender = new EventEmitter();
+  @Output() newFoodSender = new EventEmitter();
 
   cancelNewFoodForm() {
     this.cancelNewFoodSender.emit();
   }
+
+  saveNewFood(foodName: string, foodDetails: string, foodCalories: number) {
+    let newFood = new Food(foodName, foodDetails,foodCalories);
+
+    this.inValidName = !newFood.isValidName();
+    this.inValidCalories = !newFood.isValidCalories();
+
+    if (!this.inValidName && !this.inValidCalories) {
+      this.newFoodSender.emit(newFood);
+    }
+  }
+
 
   constructor() { }
 

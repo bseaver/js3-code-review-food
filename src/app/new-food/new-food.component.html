@@ -1,4 +1,34 @@
-<form *ngIf="showNewFoodForm">
-  new-food works!
-  <button (click)="cancelNewFoodForm()" class="btn btn-warning">Cancel Entry</button>
+<form *ngIf="showNewFoodForm" class="form-horizontal">
+  <div class="form-group">
+    <label for="foodName">Name of Food:</label>
+    <input #foodName type="text" name="foodName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="foodDetails">Details:</label>
+    <input #foodDetails type="text" name="foodDetails" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="foodCalories">Calories:</label>
+    <input #foodCalories type="number" name="foodCalories" class="form-control">
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1">
+      <button (click)="saveNewFood(foodName.value, foodDetails.value, foodCalories.value)" class="btn btn-success">Save Entry</button>
+    </div>
+    <div class="col-xs-8">
+      &nbsp;
+    </div>
+    <div class="col-xs-3">
+      <button (click)="cancelNewFoodForm()" class="btn btn-warning">Cancel Entry</button>
+    </div>
+  </div>
+
+  <br>
+
+  <input *ngIf="inValidName" class="form-control" readonly value="Name is required">
+  <input *ngIf="inValidCalories" class="form-control" readonly value="Calories greater than or equal to 0 are required">
+
 </form>
