@@ -16,13 +16,13 @@
 
 ## Key Objectives
 * Application uses a model to organize data.
-* Components are used to create display and behavior for your * templates.
+* Components are used to create display and behavior for your templates.
 * TypeScript is used throughout application.
 * Users can create and edit instances of a model.
 * Models can be filtered using a pipe.
 
 ## Summarized User Story
-* Form to add food with name calories and details comment
+* Form to add food with name calories and details
 * View list of foods entered
 * Filter foods: All, or Calories over 500
 * Click food see edit form
