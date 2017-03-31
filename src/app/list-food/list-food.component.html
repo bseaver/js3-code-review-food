@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let food of foodList; let idx = index;">
+    <tr *ngFor="let food of foodList | caloricContent; let idx = index;">
       <td>{{food.foodName}}</td>
       <td>{{food.foodDetails}}</td>
       <td>{{food.foodCalories}}</td>
