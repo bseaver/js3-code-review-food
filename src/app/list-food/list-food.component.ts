@@ -11,6 +11,7 @@ export class ListFoodComponent implements OnInit {
   @Input() foodList: Food[];
   @Output() deleteFoodSender = new EventEmitter();
   @Output() startNewFoodSender = new EventEmitter();
+  @Output() startEditFoodSender = new EventEmitter();
 
   startDeleteFood(idx: number) {
     this.deleteFoodSender.emit(idx);
@@ -18,6 +19,10 @@ export class ListFoodComponent implements OnInit {
 
   startNewFood() {
     this.startNewFoodSender.emit();
+  }
+
+  startEditFood(idx) {
+    this.startEditFoodSender.emit(idx);
   }
 
   constructor() { }

@@ -40,4 +40,8 @@ export class AppComponent {
     this.foodList.push(sentFood);
     this.showNewFoodForm = false;
   }
+
+  startEditFood(idx: number) {
+    alert("Edit Food Button Clicked " + idx);
+  }
 }
