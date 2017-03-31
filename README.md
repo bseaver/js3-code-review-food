@@ -48,9 +48,15 @@ The following is required to create or use this example.
 
 ## Angular 2 Generated Architecture with partial file and folder "names"
 * Generate Project with Angular 2 CLI (Command line Interface)
+  * $ `ng new food`
 * Twitter Bootstrap dependancy
-* Build functionality from App "Root" Component
+  * $ `bower init`
+  * $ `bower install bootstrap --save`
+  * (Also manually edit angular-cli.json and .gitignore)
 * Generate a Model (Class) for "food"
+  * $ `ng g class food`
+  * (rename src/app/food.ts to src/app/food.model.ts)
+* Build functionality from App "Root" Component
 * Generate a Component for listing "list-food"
 * Generate a Component for Adding "new-food"
 * Generate a Componentent for Editing "edit-food"
@@ -73,12 +79,6 @@ The following is required to create or use this example.
 * Integrate Add food component
 * Caloric Content pipe (food filter)
 * Integrate Caloric Content pipe
-
-## Angular 2 and Bower Commands used in creation of project
-* $ `ng new food`
-* $ `bower init`
-* $ `bower install bootstrap --save`
-
 
 
 ##### End of File
