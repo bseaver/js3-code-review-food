@@ -11,6 +11,7 @@ import { Food } from "./food.model";
 
 export class AppComponent {
   showNewFoodForm = false;
+  editFood: Food = null;
 
   // Seeded data for demonstration purposes
   foodList: Food[] = [
@@ -42,6 +43,10 @@ export class AppComponent {
   }
 
   startEditFood(idx: number) {
-    alert("Edit Food Button Clicked " + idx);
+    this.editFood = this.foodList[idx];
+  }
+
+  endEditFood() {
+    this.editFood = null;
   }
 }

@@ -13,6 +13,11 @@
     </div> <!-- col -->
 
     <div class="col-md-6">
+      <app-edit-food
+        [editFood]="editFood"
+        (endEditFoodSender)="endEditFood()"
+      ></app-edit-food>
+      
       <app-new-food
         [showNewFoodForm]="showNewFoodForm"
         (cancelNewFoodSender)="cancelNewFood()"

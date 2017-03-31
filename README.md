@@ -61,6 +61,7 @@ The following is required to create or use this example.
 * Generate a Component for Adding "new-food"
   * $ `ng g component new-food`
 * Generate a Component for Editing "edit-food"
+  * $ `ng g component edit-food`
 * Generate a Pipe for filtering food "caloric-content"
 
 
