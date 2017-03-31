@@ -1,3 +1,10 @@
+<select (change)="changeFoodListFilter($event.target.value)">
+  <option value="all">All Foods</option>
+  <option value="over500KCal">Greater or Equal to 500 Calories</option>
+</select>
+<br>
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let food of foodList | caloricContent; let idx = index;">
+    <tr *ngFor="let food of foodList | caloricContent:foodListFilter; let idx = index;">
       <td>{{food.foodName}}</td>
       <td>{{food.foodDetails}}</td>
       <td>{{food.foodCalories}}</td>
