@@ -10,6 +10,8 @@ import { Food } from "./food.model";
 
 
 export class AppComponent {
+  showNewFoodForm = false;
+  
   // Seeded data for demonstration purposes
   foodList: Food[] = [
     new Food('Apple', 'Large Braeburn', 100),
@@ -27,6 +29,10 @@ export class AppComponent {
   }
 
   startNewFood() {
-    alert("Open new food form now!");
+    this.showNewFoodForm = true;
+  }
+
+  cancelNewFood() {
+    this.showNewFoodForm = false;
   }
 }

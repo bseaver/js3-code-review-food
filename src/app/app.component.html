@@ -12,7 +12,10 @@
     </div> <!-- col -->
 
     <div class="col-md-6">
-      <!-- Add and Edit components to go here -->
+      <app-new-food
+        [showNewFoodForm]="showNewFoodForm"
+        (cancelNewFoodSender)="cancelNewFood()"
+      ></app-new-food>
     </div> <!-- col -->
 
   </div> <!-- row -->

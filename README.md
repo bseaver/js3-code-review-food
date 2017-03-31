@@ -59,6 +59,7 @@ The following is required to create or use this example.
 * Generate a Component for listing "list-food"
   * $ `ng g component food-list`
 * Generate a Component for Adding "new-food"
+  * $ `ng g component new-food`
 * Generate a Component for Editing "edit-food"
 * Generate a Pipe for filtering food "caloric-content"
 
@@ -73,9 +74,9 @@ The following is required to create or use this example.
 * Display list of foods
 * Build out list display
 * Implement food delete
+* Add food component
 * Edit food component
 * Integrate edit component
-* Add food component
 * Integrate Add food component
 * Caloric Content pipe (food filter)
 * Integrate Caloric Content pipe
