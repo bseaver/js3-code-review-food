@@ -9,6 +9,11 @@ import { Food } from './../food.model';
 
 export class ListFoodComponent implements OnInit {
   @Input() foodList: Food[];
+  @Output() deleteFoodSender = new EventEmitter();
+
+  startDeleteFood(idx: number) {
+    this.deleteFoodSender.emit(idx);
+  }
 
   constructor() { }
 

@@ -6,6 +6,7 @@
     <div class="col-md-6">
       <app-list-food
         [foodList]="foodList"
+        (deleteFoodSender)="deleteFood($event)"
       ></app-list-food>
     </div> <!-- col -->
 

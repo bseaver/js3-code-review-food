@@ -10,8 +10,6 @@ import { Food } from "./food.model";
 
 
 export class AppComponent {
-  title = 'app works!';
-
   // Seeded data for demonstration purposes
   foodList: Food[] = [
     new Food('Apple', 'Large Braeburn', 100),
@@ -22,5 +20,9 @@ export class AppComponent {
     new Food('Burger', 'large with cheese', 800),
     new Food('Fries', 'heaping plateful', 900),
     new Food('Ice Cream', 'bowl with cherry on top', 750)
-  ]
+  ];
+
+  deleteFood(idx: number) {
+    this.foodList.splice(idx, 1);
+  }
 }
