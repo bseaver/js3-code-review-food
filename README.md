@@ -56,10 +56,9 @@ The following is required to create or use this example.
 * Generate a Model (Class) for "food"
   * $ `ng g class food`
   * (rename src/app/food.ts to src/app/food.model.ts)
-* Build functionality from App "Root" Component
 * Generate a Component for listing "list-food"
 * Generate a Component for Adding "new-food"
-* Generate a Componentent for Editing "edit-food"
+* Generate a Component for Editing "edit-food"
 * Generate a Pipe for filtering food "caloric-content"
 
 
@@ -68,8 +67,8 @@ The following is required to create or use this example.
 * README.md
 * Integrate Twitter Bootstrap styling
 * Data model
-* List component
 * Root component with model and seed data
+* List component
 * Display list of foods
 * Build out list display
 * Implement food delete

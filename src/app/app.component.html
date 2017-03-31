@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<h2>Food List with Angular 2</h2>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+      <!-- List Component to go here -->
+      <ul>
+        <li *ngFor="let food of foodList;">{{food.foodName}} {{food.foodCalories}}</li>
+      </ul>
+    </div> <!-- col -->
+
+    <div class="col-md-6">
+      <!-- Add and Edit components to go here -->
+    </div> <!-- col -->
+
+  </div> <!-- row -->
+</div> <!-- container -->
