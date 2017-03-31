@@ -57,6 +57,7 @@ The following is required to create or use this example.
   * $ `ng g class food`
   * (rename src/app/food.ts to src/app/food.model.ts)
 * Generate a Component for listing "list-food"
+  * $ `ng g component food-list`
 * Generate a Component for Adding "new-food"
 * Generate a Component for Editing "edit-food"
 * Generate a Pipe for filtering food "caloric-content"

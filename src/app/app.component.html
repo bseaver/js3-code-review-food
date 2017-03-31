@@ -4,10 +4,9 @@
   <div class="row">
 
     <div class="col-md-6">
-      <!-- List Component to go here -->
-      <ul>
-        <li *ngFor="let food of foodList;">{{food.foodName}} {{food.foodCalories}}</li>
-      </ul>
+      <app-list-food
+        [foodList]="foodList"
+      ></app-list-food>
     </div> <!-- col -->
 
     <div class="col-md-6">
