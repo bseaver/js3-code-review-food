@@ -58,8 +58,8 @@ The following is required to create or use this example.
 
 
 ## Outline of Planned Git Commits
-* README.md
 * Generated project
+* README.md
 * Integrate Twitter Bootstrap styling
 * Data model
 * List component
@@ -73,6 +73,11 @@ The following is required to create or use this example.
 * Integrate Add food component
 * Caloric Content pipe (food filter)
 * Integrate Caloric Content pipe
+
+## Angular 2 and Bower Commands used in creation of project
+* $ `ng new food`
+* $ `bower init`
+* $ `bower install bootstrap --save`
 
 
 
