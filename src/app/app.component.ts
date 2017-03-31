@@ -25,4 +25,8 @@ export class AppComponent {
   deleteFood(idx: number) {
     this.foodList.splice(idx, 1);
   }
+
+  startNewFood() {
+    alert("Open new food form now!");
+  }
 }
