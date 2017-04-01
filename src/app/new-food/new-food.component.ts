@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Food } from "./../food.model";
+import { Food } from './../food.model';
 
 @Component({
   selector: 'app-new-food',
@@ -19,7 +19,7 @@ export class NewFoodComponent implements OnInit {
   }
 
   saveNewFood(foodName: string, foodDetails: string, foodCalories: number) {
-    let newFood = new Food(foodName, foodDetails,foodCalories);
+    const newFood = new Food(foodName, foodDetails, foodCalories);
 
     this.inValidName = !newFood.isValidName();
     this.inValidCalories = !newFood.isValidCalories();
