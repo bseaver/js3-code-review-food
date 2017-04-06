@@ -26,6 +26,9 @@ export class AppComponent {
   ];
 
   deleteFood(thisFood: Food) {
+    if (thisFood === this.editFood) {
+      this.endEditFood();
+    }
     for (let i = 0; i < this.foodList.length; i++) {
       if (this.foodList[i] === thisFood) {
         this.foodList.splice(i, 1);
