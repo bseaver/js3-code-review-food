@@ -1,0 +1,30 @@
+npm uninstall angular2-cli
+
+npm install -g @angular/cli
+
+npm uninstall --save-dev angular-cli
+
+install --save-dev @angular/cli@latest
+
+Environment configuration does not contain "environmentSource" entry.
+
+A new environmentSource entry replaces the previous source entry inside environments.
+
+To migrate angular-cli.json follow the example below:
+
+Before:
+
+"environments": {
+  "source": "environments/environment.ts",
+  "dev": "environments/environment.ts",
+  "prod": "environments/environment.prod.ts"
+}
+
+
+After:
+
+"environmentSource": "environments/environment.ts",
+"environments": {
+  "dev": "environments/environment.ts",
+  "prod": "environments/environment.prod.ts"
+}
